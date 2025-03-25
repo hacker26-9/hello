@@ -16,8 +16,8 @@ public class rpcclient {
         System.out.print("Enter second number: ");
         double num2 = scanner.nextDouble();
 
-        output.println(operation + " " + num1 + " " + num2); // Send request
-        System.out.println("Server: " + input.readLine()); // Receive response
+        output.println(operation + " " + num1 + " " + num2); 
+        System.out.println("Server: " + input.readLine()); 
 
         socket.close();
         scanner.close();

@@ -9,8 +9,8 @@ public class rpcserver {
         BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
 
-        String request = input.readLine(); // Read request
-        String[] parts = request.split(" "); // Format: operation number1 number2
+        String request = input.readLine(); 
+        String[] parts = request.split(" "); 
         String operation = parts[0];
         double num1 = Double.parseDouble(parts[1]);
         double num2 = Double.parseDouble(parts[2]);

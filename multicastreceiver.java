@@ -2,7 +2,7 @@ import java.net.*;
 
 public class multicastreceiver {
     public static final int PORT = 1234;
-    public static final String MULTICAST_ADDRESS = "239.1.2.3"; // Same as Sender
+    public static final String MULTICAST_ADDRESS = "239.1.2.3"; 
 
     public static void main(String[] args) throws Exception {
         MulticastSocket socket = new MulticastSocket(PORT);
@@ -16,7 +16,7 @@ public class multicastreceiver {
         DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
 
         while (true) {
-            socket.receive(packet); // Receive packet
+            socket.receive(packet); 
             String message = new String(packet.getData(), 0, packet.getLength());
             System.out.println("Received from " + packet.getAddress() + ": " + message);
         }

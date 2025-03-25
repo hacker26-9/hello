@@ -15,7 +15,7 @@ public class udpserver {
             String numberStr = new String(receivePacket.getData(), 0, receivePacket.getLength());
 
             int number = Integer.parseInt(numberStr);
-            long fact = factorial(number);  // Calculate factorial
+            long fact = factorial(number);  
             String result = "Factorial of " + number + " is " + fact;
 
             InetAddress clientAddress = receivePacket.getAddress();
