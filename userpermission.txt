@@ -1,0 +1,17 @@
+mkdir directoryname
+cd directoryname
+pwd
+touch filename
+ls
+ls -l filename
+chmod 700 filename
+chmod 764 filename
+ls -l filename
+sudo adduser username
+sudo passwd username
+id username
+sudo addgroup groupname
+sudo usermod -aG groupname username
+id groupname
+rm filename
+rmdir directoryname

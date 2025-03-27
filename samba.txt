@@ -1,0 +1,18 @@
+sudo apt-get update
+sudo apt install samba
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.backup
+sudo mkdir -p /home/somaiya/somaiya_FYIT
+cd /home/Somaiya
+sudo addusersomaiya
+sudo smbpasswd -a Somaiya
+sudo systemctl start smbd sudo
+systemctl status smbd
+nano /etc/samba/smb.conf
+[somaiya_FYIT]
+path = /home/somaiya/shared
+read only = no
+browsable = yes guest
+ok = yes
+force user = Somaiya
+systemctl restart smbd
+ifconfig
