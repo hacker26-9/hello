@@ -1,0 +1,15 @@
+sudo apt update
+sudo apt install vsftpd -y
+sudo nano /etc/vsftpd.conf
+
+sudo systemctl restart vsftpd
+sudo systemctl enable vsftpd
+
+
+listen=yes
+anonymous_enable = yes 
+local_enable = yes
+write_enable = yes
+chroot_local_user = yes 
+
+ssl_enable = no 
